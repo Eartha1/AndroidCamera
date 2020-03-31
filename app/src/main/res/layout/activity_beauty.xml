@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BeautyActivity">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/arrow"/>
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/back"
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/btn_savephoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_gray"
+            android:text="保 存"
+            android:textColor="@color/colorWrite"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/topLayout" />
+
+
+    <LinearLayout
+        android:id="@+id/select"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/edit"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="编辑"
+            android:textSize="30dp"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="风格"
+            android:textSize="30dp"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/filter"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="滤镜"
+            android:textSize="30dp"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/sticker"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="贴纸"
+            android:textSize="30dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+    <com.lcw.library.stickerview.StickerLayout
+        android:id="@+id/sticker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topLayout"
+        android:layout_above="@+id/select"/>
+
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_sticker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/select">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/iv_sticker_01"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/sticker1" />
+
+            <ImageView
+                android:id="@+id/iv_sticker_02"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/sticker2" />
+
+            <ImageView
+                android:id="@+id/iv_sticker_03"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/sticker3" />
+
+            <ImageView
+                android:id="@+id/iv_sticker_04"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/sticker4" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</RelativeLayout>
